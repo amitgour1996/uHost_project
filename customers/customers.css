@@ -69,16 +69,18 @@ main {
   .testimonial {
     margin: 3rem auto;
     max-width: 93rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   .testimonial__image-container {
     min-width: 350px;
-    display: inline-block;
-    vertical-align: middle;
     width: 60%;
   }
   .testimonial__info {
-    display: inline-block;
     width: 35%;
-    vertical-align: top;
+  }
+  main {
+    padding-top: 2rem;
   }
 }

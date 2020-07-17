@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("./AnonymousPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("./AnonymousPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
 .background {
   background: url("../images/plans-background.jpg") center/cover;
   position: fixed;
@@ -62,8 +73,8 @@ main {
   border: 1px solid #0e4f1f;
   padding: 1rem;
   color: #0e4f1f;
-  font-size: 1.25rem;
   background-color: white;
+  font-size: 1.25rem;
 }
 
 #plus {
