@@ -7,20 +7,28 @@ const negativeBtn = document.querySelector(".modal__action--negative");
 
 function closeModal() {
   //   modal.style.display = "none";
-  //   backdrop.style.display = "none";
+
   if (modal) {
     modal.classList.remove("open");
   }
   backdrop.classList.remove("open");
-  document.body.style.overflow = "visible";
+
+  setTimeout(() => {
+    backdrop.style.display = "none";
+  }, 200);
+
+  document.body.style.overflowY = "visible";
 }
 
 for (const selectPlanButton of selectPlanButtons) {
   selectPlanButton.addEventListener("click", () => {
-    // backdrop.style.display = "block";
+    backdrop.style.display = "block";
     // modal.style.display = "block";
-    backdrop.classList.add("open");
-    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      backdrop.classList.add("open");
+    }, 10);
+
+    document.body.style.overflowY = "hidden";
     modal.classList.add("open");
   });
 }
@@ -38,11 +46,13 @@ if (negativeBtn) {
 }
 
 toggleButton.addEventListener("click", () => {
-  //   backdrop.style.display = "block";
-  //   mobileNav.style.display = "block";
-  backdrop.classList.add("open");
-  document.body.style.overflow = "hidden";
-  if (mobileNav) {
-    mobileNav.classList.add("open");
-  }
+  backdrop.style.display = "block";
+  mobileNav.style.display = "block";
+  setTimeout(() => {
+    backdrop.classList.add("open");
+    if (mobileNav) {
+      mobileNav.classList.add("open");
+    }
+  }, 10);
+  document.body.style.overflowY = "hidden";
 });
